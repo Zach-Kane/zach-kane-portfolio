@@ -1,0 +1,20 @@
+{
+  "name": "eleventy-site",
+  "version": "1.0.0",
+  "main": "index.js",
+"scripts": {
+  "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/main.css",
+  "start": "npm run build:css && eleventy --serve",
+  "build": "npm run build:css && eleventy"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.1"
+  }
+}
