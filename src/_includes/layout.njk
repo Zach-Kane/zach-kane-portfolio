@@ -3,7 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ title }}</title>
+
+  <!-- Dynamic Page Title -->
+  <title>{{ title }} | Wasatch Bitworks</title>
+
+  <!-- Meta Description (from front matter if available) -->
+  {% if description %}
+    <meta name="description" content="{{ description }}">
+  {% else %}
+    <meta name="description" content="Wasatch Bitworks builds clean, fast websites for small businesses and founders in Utah and beyond.">
+  {% endif %}
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="{{ title }} | Wasatch Bitworks">
+  {% if description %}
+    <meta property="og:description" content="{{ description }}">
+  {% endif %}
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wasatchbitworks.com/">
+  <meta property="og:image" content="/images/social-share.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }} | Wasatch Bitworks">
+  {% if description %}
+    <meta name="twitter:description" content="{{ description }}">
+  {% endif %}
+  <meta name="twitter:image" content="/images/social-share.png">
+
+  <!-- Styles & Assets -->
   <link href="/styles/main.css" rel="stylesheet" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
