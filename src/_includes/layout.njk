@@ -4,17 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Dynamic Page Title -->
   <title>{{ title }} | Wasatch Bitworks</title>
 
-  <!-- Meta Description (from front matter if available) -->
   {% if description %}
     <meta name="description" content="{{ description }}">
   {% else %}
     <meta name="description" content="Wasatch Bitworks builds clean, fast websites for small businesses and founders in Utah and beyond.">
   {% endif %}
 
-  <!-- Open Graph / Social Sharing -->
   <meta property="og:title" content="{{ title }} | Wasatch Bitworks">
   {% if description %}
     <meta property="og:description" content="{{ description }}">
@@ -23,7 +20,6 @@
   <meta property="og:url" content="https://wasatchbitworks.com/">
   <meta property="og:image" content="/images/social-share.png">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ title }} | Wasatch Bitworks">
   {% if description %}
@@ -31,66 +27,22 @@
   {% endif %}
   <meta name="twitter:image" content="/images/social-share.png">
 
-  <!-- Styles & Assets -->
   <link href="/styles/main.css" rel="stylesheet" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
 </head>
-  <!--
-    Tailwind classes:
-    bg-gradient-to-b: vertical gradient background
-    from-white via-indigo-100 to-indigo-800: gradient colors from white at top, through light indigo, to dark indigo at bottom
-    text-stone-900: dark gray text color
-    font-sans: use sans-serif font
-    antialiased: smooths font rendering
-    scroll-smooth: enables smooth scrolling
-  -->
+
 <body class="bg-gradient-to-b from-white via-indigo-200 to-indigo-800 text-stone-900 font-sans antialiased scroll-smooth">
 
-  <!--
-    Tailwind classes:
-    bg-indigo-900: deep indigo background
-    text-white: white text color
-    py-6: vertical padding
-    shadow-md: medium box shadow
-  -->
   <header class="bg-indigo-900 text-white py-6 shadow-md">
-    <!--
-      Tailwind classes:
-      text-3xl: large text size
-      text-center: center-align text
-      font-extrabold: extra bold font weight
-      tracking-tight: tight letter spacing
-    -->
+
     <h1 class="text-3xl text-center font-extrabold tracking-tight">Wasatch Bitworks</h1>
   </header>
   <main>
-  <!--
-    Tailwind classes:
-    max-w-3xl: maximum width set to 3xl (centered column)
-    mx-auto: horizontal margin auto, centers the element
-    px-4: horizontal padding
-    py-12: vertical padding
-    bg-white: white background
-    bg-opacity-50: 50% opacity for background
-    backdrop-blur-md: medium blur effect behind the element
-    rounded-lg: large rounded corners
-    shadow-md: medium box shadow
-    my-10: vertical margin top and bottom
-    (Creates a centered, semi-transparent, blurred white card with padding and shadow)
-  -->
-  <main class="max-w-3xl mx-auto px-4 py-12 bg-white bg-opacity-50 backdrop-blur-md rounded-lg shadow-md my-10">
+  <main class="max-w-6xl mx-auto px-4 py-12 bg-white bg-opacity-50 backdrop-blur-md rounded-lg shadow-md my-10">
     {{ content | safe }}
   </main>
 
-  <!--
-    Tailwind classes:
-    text-center: center-align text
-    text-sm: small text size
-    text-white: white text color
-    bg-indigo-900: deep indigo background
-    py-6: vertical padding
-  -->
   <footer class="text-center text-sm text-white bg-indigo-900 py-6">
     &copy; 2025 Wasatch Bitworks
   </footer>
